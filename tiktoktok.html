@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Live with Rose Alert</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #liveContainer {
+            position: relative;
+            width: 640px;
+            height: 360px;
+            background-color: #000;
+        }
+        #tiktokLive {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="liveContainer">
+        <iframe id="tiktokLive" src="https://www.tiktok.com/@nullwifi" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <audio id="beepSound" src="beep.mp3" preload="auto"></audio>
+
+    <script>
+        // Replace this function with your actual logic to detect when a rose is sent
+        function onRoseReceived() {
+            document.getElementById('beepSound').play();
+        }
+
+        // Simulate receiving a rose every 10 seconds (for testing purposes)
+        setInterval(onRoseReceived, 10000);
+    </script>
+</body>
+</html>
